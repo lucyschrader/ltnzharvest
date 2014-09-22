@@ -1,0 +1,34 @@
+
+    Title: LibraryTechNZ: Comparing the 2008 and 2010 New Zealand Web Harvests 
+
+    Author: Gordon Paynter 
+
+    Date: Thursday, April 7, 2011 
+ 
+
+    <div class="post-body entry-content">
+<p><a href="http://twitter.com/taftan">Brian of Auckland</a> has asked about the <a href="http://www.natlib.govt.nz/about-us/current-initiatives/web-harvest-2010">New Zealand Web Harvest 2010</a>: "How much of the data has been analysed, catalogued or made available... Any stats?"</p>
+<p>All good questions. "I'm sure there is a lot of interest :-)" he adds.</p>
+<p><span style="font-size:130%;">Analysis<br/></span><br/>This prompt has caused me to stop making excuses, and start analysing.  This is more complicated than you might think, because there's just so much data. Even the log files and summary reports are too large to work with easily.</p>
+<p>Luckily, I still have the scripts I used in 2008, so the first pass is fairly easy. (These scripts don't examine the data itself, they examine the reports generated from the harvest result by the Internet Archive.) I've now verified and written up this summary for 2010.</p>
+<p>My colleague <a href="http://www.linkedin.com/pub/gillian-lee/26/694/180">Gillian</a> has taken this report and started doing side-by-side comparisons with the 2008 data. I've summarised her findings below, and here's a more detailed breakdown (Link to follow).</p>
+<p><span style="font-size:130%;">Statistics</span></p>
+<p>The following table provides a summary of the different website harvests in 2008 and 2010.</p>
+<p><a href="http://3.bp.blogspot.com/-Uk_pspWePTA/TaYg5joYmTI/AAAAAAAAFEc/iBnVkDlD47M/s1600/NZ%2BWeb%2BHarvest%2Bsummary%2Bstats.png"><img alt="" border="0" id="BLOGGER_PHOTO_ID_5595195760243677490" src="http://3.bp.blogspot.com/-Uk_pspWePTA/TaYg5joYmTI/AAAAAAAAFEc/iBnVkDlD47M/s320/NZ%2BWeb%2BHarvest%2Bsummary%2Bstats.png" style="display: block; margin: 0px auto 10px; text-align: center; cursor: pointer; width: 388px; height: 110px;"/></a>Here's a bit more detail on the .NZ part of the harvest.</p>
+<p><a href="http://4.bp.blogspot.com/-SojYXw_9QuY/TaYhWNujIyI/AAAAAAAAFEk/LVLwcw3hkTk/s1600/NZ%2BWeb%2BHarvest%2B.NZ%2Bstats.png"><img alt="" border="0" id="BLOGGER_PHOTO_ID_5595196252580160290" src="http://4.bp.blogspot.com/-SojYXw_9QuY/TaYhWNujIyI/AAAAAAAAFEk/LVLwcw3hkTk/s320/NZ%2BWeb%2BHarvest%2B.NZ%2Bstats.png" style="display: block; margin: 0px auto 10px; text-align: center; cursor: pointer; width: 389px; height: 158px;"/></a>What does this tell us? The obvious thing is the 2010 harvest ran longer and gathered more data, but that doesn't necessarily mean the internet was any bigger by then because we made a lot of changes as a result of feedback following the 2008 harvest, and consultation prior to the 2010 harvest.</p>
+<p>The first major change was that the 2010 harvest had much better seeds because we had access to the <a href="http://en.wikipedia.org/wiki/Zone_file">Zone files</a> for .nz, .com, .net and .org and therefore believe we have much better coverage of the registered domains.</p>
+<p>The second major change was that we honoured the robots.txt protocol (<a href="http://librarytechnz.natlib.govt.nz/2010/04/new-zealand-whole-of-domain-web-harvest.html">except when downloading images and similar elements embedded in web pages</a>). This means that many websites were crawled less heavily than may have been the case in 2008, when we ignored robots.txt (unless specifically requested otherwise) to get a more complete crawl.</p>
+<p>To summarise, we think the 2010 crawl had greater coverage than the first, the specific websites harvested were in many cases less complete.</p>
+<p><span style="font-size:130%;">Some anecdotal comments</span></p>
+<p>While we haven't made a systematic study of the data I believe the second harvest provides good coverage of the .nz domain in 2010 (whereas the 2008 harvest was patchy), and that .nz simply was significantly bigger in 2010 than in 2008 (but we'll probably never know how much bigger, or even if such things can be measured).</p>
+<p>Gillian and the harvesting team currently have access to both harvests. As is always the case with web archiving, the quality of the harvested websites varies. Some are complete and can be viewed properly. Others lack content because of technical limitations of the harvester, or because the website owners have excluded the harvester with robots.txt files. In selective web harvesting these problems are often resolved by tailoring the profiles for each website, or contacting the website owner. In domain harvesting this isn't possible, due to the sheer quantity of data and the speed of the harvest.</p>
+<p>Anecdotally, the 2010 seemed to do a much better job of avoiding spider traps, thanks to advances in harvesting practice, and to the changed robots policy.</p>
+<p><span style="font-size:130%;">Cataloguing</span></p>
+<p>There's none. Our selective harvests are individually catalogued and available online, but as yet we have no catalogue record for the domain harvests.</p>
+<p><span style="font-size:130%;">Making it available</span></p>
+<p>The harvests are currently only available to selected staff members in the Library. There are a lot of legal (and also technical) issues that have to be addressed before we can provide public access, and while we've been able to run the harvests and secure the results, we haven't had the resources to have a serious tilt at these access challenges.</p>
+<p>As an interim measure we're discussing bringing the 2008 and 2010 domain harvests together into one access point, and making them available within the the Library's reading rooms when the Molesworth Street building re-opens in 2012.</p>
+<p>The next stage would be to provide public online access, and we're every bit as excited about that prospect as the many people who email us to request it!</p>
+<div style="clear: both;"></div>
+</div>
+    
