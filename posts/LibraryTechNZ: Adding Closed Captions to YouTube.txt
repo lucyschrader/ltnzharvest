@@ -1,0 +1,37 @@
+
+    Title: LibraryTechNZ: Adding Closed Captions to YouTube 
+
+    Author: National Library of New Zealand 
+
+    Date: Tuesday, December 14, 2010 
+ 
+
+    <div class="post-body entry-content">
+<p>We've recently had our first go at adding closed captions to our <a href="http://www.youtube.com/user/NationalLibraryNZ">YouTube videos</a>. Closed captions aid hearing impaired users in understanding the content of our videos and are extremely helpful for users that don't have sound enabled on their computers. Closed Captions are also required under <a href="http://www.w3.org/TR/WCAG20/#media-equiv">Guideline 1.2.2 of the Web Content Accessibility Guidelines</a> (WCAG) 2.0.<br/>
+The process is actually quite straightforward and less time-consuming than I would have thought. It does help if you're provided with a transcript of the original content though.<br/>
+Closed Captions are expected to describe all significant audio content including non-speech information such as the identity of speakers and their manner of speaking as well as music and sound effects. In this particular case it was fairly simple as the audio was largely only a voice over describing the content of the video.<br/>
+YouTube currently supports two format options for closed captions, either .SRT of .SBV.<br/>
+The .SBV format is YouTubes own format and is slightly simpler than .SRT so we have used it for this example.<br/>
+The .SBV format is just a basic text file that follows a time format of hour:minutes:seconds.milliseconds. The times are delimitated by a comma and are followed by a line break and then the text to be displayed during this time. Two line breaks indicates the end of the caption and the start of the next time code.<br/>
+Here's how the first twenty seconds of the closed caption file looks:<br/>
+0:00:01.000,0:00:02.000<br/>
+Hi, I'm David Reeves<br/>
+0:00:02.000,0:00:05.000<br/>
+I'm the Associate Chief Librarian at the Alexander Turnbull Library in Wellington<br/>
+0:00:05.000,0:00:14.000<br/>
+We've undertaken a huge project to digitise a number of our photographic collections during 2010 and 2011<br/>
+0:00:14.000,0:00:18.000<br/>
+while the National Library building has been undergoing some major refurbishment<br/>
+0:00:18.000,0:00:22.000<br/>
+we've been able to dedicate around 20 staff to this special project.<br/>
+Getting the captions aligned to the right time code can be slightly tricky and I found that it was easiest to play through the video and pause every now and then to pick the best start and finish time for each time code. It's also important to keep line lengths reasonable as otherwise YouTube can cut of the captioning text. I found that no more than 15 words per line worked as a rough guide. This often means that you'll need to break up longer sentences into several shorted time codes.<br/>
+If you find that directly editing a .SBV text file is too much work then there are also sites out there such as <a href="http://captiontube.appspot.com/">Caption Tube</a> which help make the captioning process easier.<br/>
+Here's how our original video looked:<br/>
+<a href="http://4.bp.blogspot.com/_kkvLt8ucYMU/TQaMi52cxVI/AAAAAAAAAHI/N79qmkyCc8M/s1600/closed-captions%2Boff.jpg" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img alt="" border="0" id="BLOGGER_PHOTO_ID_5550278122053354834" src="http://4.bp.blogspot.com/_kkvLt8ucYMU/TQaMi52cxVI/AAAAAAAAAHI/N79qmkyCc8M/s400/closed-captions%2Boff.jpg" style="cursor: pointer; display: block; height: 244px; margin: 0px auto 10px; text-align: center; width: 400px;"/></a>And with closed captions (CC) turned on:<br/>
+<a href="http://2.bp.blogspot.com/_kkvLt8ucYMU/TQaMIVEMViI/AAAAAAAAAHA/ac8gZlraazM/s1600/closed%2Bcaptions.jpg" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img alt="" border="0" id="BLOGGER_PHOTO_ID_5550277665502287394" src="http://2.bp.blogspot.com/_kkvLt8ucYMU/TQaMIVEMViI/AAAAAAAAAHA/ac8gZlraazM/s400/closed%2Bcaptions.jpg" style="cursor: pointer; display: block; height: 244px; margin: 0px auto 10px; text-align: center; width: 400px;"/></a><br/>
+Have a look at the <a href="http://www.youtube.com/watch?v=A8oX3SRVfLA">completed Pictures Online video on our YouTube channel</a>.<br/>
+<br/>
+Matt O'Reilly</p>
+<div style="clear: both;"></div>
+</div>
+    
