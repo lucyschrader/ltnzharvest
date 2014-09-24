@@ -5,12 +5,9 @@ from bs4 import BeautifulSoup
 import requests, os
 
 replacements = {'<br/><br/>': '</p>\n<p>', '“': '"', '”': '"', "’": "'", '…': '...', '–': '&ndash;'}
-urls = ['http://librarytechnz.natlib.govt.nz/2011/04/comparing-2008-and-2010-new-zealand-web.html',
-'http://librarytechnz.natlib.govt.nz/2011/02/results-of-our-twitter-user-survey.html',
-'http://librarytechnz.natlib.govt.nz/2010/12/join-search-terms-word-cloud-map-mashup.html',
-'http://librarytechnz.natlib.govt.nz/2010/12/adding-closed-captions-to-youtube.html']
 
-def harvest(url):
+def harvest(url, post_no):
+    print url
     page = requests.get(url)
     full_html = page.text
     soup = BeautifulSoup(full_html)
@@ -20,14 +17,14 @@ def harvest(url):
     post_content = soup.find("div", {"class": "post-body entry-content"})
     for tag in post_content.findAll('img'):
         if tag.parent.name == 'a':
-            filename = tag.parent['href'].split("/")[-1]
+            filename = str(post_no) + tag.parent['href'].split("/")[-1]
             grab_image(tag.parent['href'], filename)
         else:
             filename = tag['src'].split("/")[-1]
             grab_image(tag['src'], filename)
     post_content = clean_html(str(post_content), replacements)
     new_text = generate_text(title, author, date, post_content)
-    file_path = "posts/%s.txt" % title
+    file_path = "posts/%r %s.txt" % (post_no, title)
     harvested_post = open(file_path, "w+")
     harvested_post.write(new_text)
     harvested_post.close()
@@ -53,15 +50,18 @@ def generate_text(title, author, date, post_content):
     return text
 
 def run():
-#    f = open('urls.txt', 'r')
-#    for line in f:
-    for url in urls:
+    post_no = 1
+    f = open('urls.txt', 'r')
+    for line in f:
+        if line == 'DONE':
+            f.close()
+            break
+        line = line[:-1]
         try:
-            harvest(url)
+            harvest(line, post_no)
         except UnicodeDecodeError:
             print '*** Damn it people, don\'t paste straight from Word ***'
             raise
-#        finally:
-#            f.close()
+        post_no +=1
 
 run()
