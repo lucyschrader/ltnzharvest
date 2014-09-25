@@ -4,7 +4,7 @@
 from bs4 import BeautifulSoup
 import requests, os
 
-replacements = {'<br/><br/>': '</p>\n<p>', '“': '"', '”': '"', "’": "'", '…': '...', '–': '&ndash;'}
+replacements = {'<br/><br/>': '</p>\n<p>', '“': '"', '”': '"', "’": "'", '–': '&ndash;', '…': '...'}
 
 def harvest(url, post_no):
     print url
@@ -59,9 +59,9 @@ def run():
         line = line[:-1]
         try:
             harvest(line, post_no)
-        except UnicodeDecodeError:
-            print '*** Damn it people, don\'t paste straight from Word ***'
-            raise
+        except UnicodeEncodeError, e:
+            print '*** Damn it people, don\'t paste straight from Word *** \n %s' % e
+            pass
         post_no +=1
 
 run()
